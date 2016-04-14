@@ -1,0 +1,4 @@
+[submodule "Pathfinder"]
+	path = Pathfinder
+	url = git@github.com:xxAtrain223/Pathfinder.git
+	branch = cmake_core
