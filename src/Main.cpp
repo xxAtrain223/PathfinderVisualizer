@@ -33,6 +33,20 @@ int main()
 
     pathfinder_modify_tank(trajectory, length, leftTrajectory, rightTrajectory, wheelbase_width);
 
+    int i;
+    for (i = 0; i < length; i++) {
+        Segment s = trajectory[i];
+        printf("Segment: %d\n", i);
+        printf("Time Step: %f\n", s.dt);
+        printf("Coords: (%f, %f)\n", s.x, s.y);
+        printf("Position (Distance): %f\n", s.position);
+        printf("Velocity: %f\n", s.velocity);
+        printf("Acceleration: %f\n", s.acceleration);
+        printf("Jerk (Acceleration per Second): %f\n", s.jerk);
+        printf("Heading (radians): %f\n", s.heading);
+        printf("\n");
+    }
+
     free(trajectory);
 
     while (window.isOpen())
